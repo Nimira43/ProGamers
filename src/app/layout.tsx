@@ -4,7 +4,7 @@ import Providers from "@/components/Providers";
 import TopNav from "@/components/navbar/TopNav";
 
 export const metadata: Metadata = {
-  title: "Connect",
+  title: "Konnex",
   description: "Workflow app. By NimiraTech",
 };
 
@@ -15,10 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-[#f6f6ce]">
         <Providers>
           <TopNav />
+          <main className="container mx-auto p-10">
           {children}
+          </main>          
         </Providers>  
       </body>
     </html>
