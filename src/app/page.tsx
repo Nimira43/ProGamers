@@ -9,7 +9,7 @@ export default function Home() {
     <Button 
       as={Link}
       href='/members'
-      color='primary' 
+      color='danger' 
       variant='bordered' 
       startContent={<FaRegFaceDizzy size={20} />}
 
