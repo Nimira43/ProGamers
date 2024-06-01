@@ -21,7 +21,7 @@ export default function TopNav() {
         <NavbarBrand as={Link} href='/'>
             <LuBringToFront size={40} className='text-[#f5f5dc]'/>
             <div className='text-3xl font-bold flex'>
-                <span className='text-[#ff4500]'>Con</span>
+                <span className='text-[#ff4500]'>Kon</span>
                 <span className='text-[#f5f5db]'>nex</span>
             </div>
         </NavbarBrand>
