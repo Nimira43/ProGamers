@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
    <div>
-    <h1 className="text-3xl bg-[#111] text-[#ff4500] font-bold p-5 mb-3">NimiraTech &copy; 2024</h1>
+    <h1 className="text-3xl">Home Page</h1>
     <Button 
       as={Link}
       href='/members'
