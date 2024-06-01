@@ -1,7 +1,8 @@
-import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@nextui-org/react'
+import { Button, Navbar, NavbarBrand, NavbarContent } from '@nextui-org/react'
 import React from 'react'
 import { LuBringToFront } from "react-icons/lu";
 import Link from 'next/link';
+import NavLink from './NavLink';
 
 export default function TopNav() {
   return (
@@ -12,7 +13,8 @@ export default function TopNav() {
             item: [
                 'text-xl',
                 'text-[#f5f5db]',
-                'uppercase'
+                'uppercase',
+                'data-[active=true]:text-[#ff4500]'
             ]
         }}
     >
@@ -24,9 +26,9 @@ export default function TopNav() {
             </div>
         </NavbarBrand>
         <NavbarContent justify='center'>
-            <NavbarItem as={Link} href='/members'>Connect</NavbarItem>
-            <NavbarItem as={Link} href='/lists'>Lists</NavbarItem>
-            <NavbarItem as={Link} href='/messages'>Message</NavbarItem>
+            <NavLink href='/members' label='Members'/>
+            <NavLink href='/lists' label='Lists'/>
+            <NavLink href='/messages' label='Messages'/>
         </NavbarContent>
         <NavbarContent justify='end'> 
             <Button
