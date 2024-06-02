@@ -37,7 +37,7 @@ export default function LoginForm() {
                             variant='bordered'
                             {...register('email')}
                             isInvalid={!!errors.email}
-                            errorMessage={errors.email?.message as string}
+                            errorMessage={errors.email?.message}
                         />
                         <Input 
                             defaultValue=''
@@ -46,7 +46,7 @@ export default function LoginForm() {
                             type='password'
                             {...register('password')}
                             isInvalid={!!errors.password}
-                            errorMessage={errors.password?.message as string}
+                            errorMessage={errors.password?.message}
                         />
                         <Button
                             isDisabled={!isValid}
