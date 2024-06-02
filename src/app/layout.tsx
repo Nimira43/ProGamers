@@ -15,10 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-[#f6f6ce]">
+      <body className="bg-[#f9f9df]">
         <Providers>
           <TopNav />
-          <main className="container mx-auto p-10">
+          <main className="container mx-auto">
           {children}
           </main>          
         </Providers>  
