@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { GiPadlock } from 'react-icons/gi'
 
 export default function LoginForm() {
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit, formState: {errors, isValid}} = useForm()
     const onSubmit = (data: any) => {
         console.log(data)
     }
@@ -28,16 +28,21 @@ export default function LoginForm() {
                             defaultValue=''
                             label='Email'
                             variant='bordered'
-                            {...register('email')}
+                            {...register('email', {required: 'Email is required'})}
+                            isInvalid={!!errors.email}
+                            errorMessage={errors.email?.message as string}
                         />
                         <Input 
                             defaultValue=''
                             label='Password'
                             variant='bordered'
                             type='password'
-                            {...register('password')}
+                            {...register('password', {required: 'Password is required'})}
+                            isInvalid={!!errors.password}
+                            errorMessage={errors.password?.message as string}
                         />
                         <Button
+                            isDisabled={!isValid}
                             className='text-[#ff4500] bg-[#111] font-semibold'
                             fullWidth
                             type='submit'
