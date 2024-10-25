@@ -1,6 +1,7 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@nextui-org/react'
+import { Button, Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@nextui-org/react'
 import { TbDeviceGamepad3 } from 'react-icons/tb'
 import React from 'react'
+import Link from 'next/link'
 
 export default function TopNav() {
   return (
@@ -15,7 +16,7 @@ export default function TopNav() {
         ]
       }}
     >
-      <NavbarBrand>
+      <NavbarBrand as={Link} href='/'>
         <TbDeviceGamepad3 size={40} color='white' />
         <div className='font-bold text-3xl text-[#ff4500] flex'>
           <span>Pro</span>
@@ -23,10 +24,13 @@ export default function TopNav() {
         </div>
       </NavbarBrand>
       <NavbarContent justify='center'>
-        <NavbarItem>Gamers</NavbarItem>
+        <NavbarItem as={Link} href='/members'>Members</NavbarItem>
+        <NavbarItem as={Link} href='/lists'>Teams</NavbarItem>
+        <NavbarItem as={Link} href='/messages'>Messages</NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
-        Right
+        <Button variant='bordered' className='text-[#fff] border-[#fff] hover:text-[#ff4500] hover:border-[#ff4500]'> Login</Button>
+        <Button variant='bordered' className='text-[#fff] border-[#fff] hover:text-[#ff4500] hover:border-[#ff4500]'> Register</Button>
       </NavbarContent>
     </Navbar>
   )
