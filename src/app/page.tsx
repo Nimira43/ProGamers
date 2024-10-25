@@ -6,13 +6,14 @@ import Link from 'next/link'
 export default function page() {
   return (
     <div>
-      <h1>Soulz</h1>
+      <h1>ProGamers Home Page</h1>
       <Button
+        className='border-[#ff4500] text-[#111]'
         as={Link}
         href='/members' 
         color='primary' 
         variant='bordered' 
-        startContent={<FaRegSmileBeam size={20} />}
+        startContent={<FaRegSmileBeam size={20} className='text-[#111]'/>}
       >
         Submit
       </Button>
