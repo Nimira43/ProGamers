@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 
-export default function MembersPage() {
+export default function LoginPage() {
   return (
     <div>
-      <h3 className='text-3xl'>Members Page</h3>
+      <h3 className='text-3xl'>Login Page</h3>
       <Link href='/'>
         Home
       </Link>

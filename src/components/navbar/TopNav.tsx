@@ -25,7 +25,7 @@ export default function TopNav() {
       </NavbarBrand>
       <NavbarContent justify='center'>
         <NavbarItem as={Link} href='/members'>Members</NavbarItem>
-        <NavbarItem as={Link} href='/lists'>Teams</NavbarItem>
+        <NavbarItem as={Link} href='/teamss'>Teams</NavbarItem>
         <NavbarItem as={Link} href='/messages'>Messages</NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
