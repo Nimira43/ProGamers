@@ -25,12 +25,26 @@ export default function TopNav() {
       </NavbarBrand>
       <NavbarContent justify='center'>
         <NavbarItem as={Link} href='/members'>Members</NavbarItem>
-        <NavbarItem as={Link} href='/teamss'>Teams</NavbarItem>
+        <NavbarItem as={Link} href='/teams'>Teams</NavbarItem>
         <NavbarItem as={Link} href='/messages'>Messages</NavbarItem>
       </NavbarContent>
       <NavbarContent justify='end'>
-        <Button variant='bordered' className='text-[#fff] border-[#fff] hover:text-[#ff4500] hover:border-[#ff4500]'> Login</Button>
-        <Button variant='bordered' className='text-[#fff] border-[#fff] hover:text-[#ff4500] hover:border-[#ff4500]'> Register</Button>
+        <Button 
+          as={Link}
+          href='/login'
+          variant='bordered' 
+          className='text-[#fff] border-[#fff] hover:text-[#ff4500] hover:border-[#ff4500]'
+        > 
+          Login
+        </Button>
+        <Button
+          as={Link}
+          href='/register' 
+          variant='bordered' 
+          className='text-[#fff] border-[#fff] hover:text-[#ff4500] hover:border-[#ff4500]'
+        > 
+          Register
+        </Button>
       </NavbarContent>
     </Navbar>
   )
