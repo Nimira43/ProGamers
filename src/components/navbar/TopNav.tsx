@@ -21,8 +21,7 @@ export default function TopNav() {
       <NavbarBrand as={Link} href='/'>
         <TbDeviceGamepad3 size={40} color='white' />
         <div className='font-bold text-3xl text-[#ff4500] flex'>
-          <span>Pro</span>
-          <span>Gamers</span>
+          <span className='logo font-bold tracking-wider pl-2'>ProGamers</span>
         </div>
       </NavbarBrand>
       <NavbarContent justify='center'>
