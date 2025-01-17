@@ -1,7 +1,15 @@
+'use client'
+
 import { Button, Card, CardBody, CardHeader, Input } from '@nextui-org/react'
+import { useForm } from 'react-hook-form'
 import { RiLockLine } from 'react-icons/ri'
 
 export default function LoginForm() {
+  const { register, handleSubmit } = useForm()
+  const onSubmit = (data: any) => {
+    console.log(data)
+  }
+
   return (
     <Card className='w-2/5 mx-auto font'>
       <CardHeader className='flex flex-col items-center justify-center'>
@@ -14,16 +22,20 @@ export default function LoginForm() {
         </div>
       </CardHeader>
       <CardBody>
-        <form action=''>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className='space-y-4'>
             <Input 
+              defaultValue=''
               label='Email'
               variant='bordered'
+              {...register('email')}
             />
             <Input 
+              defaultValue=''
               label='Password'
               variant='bordered'
               type='password'
+              {...register('password')}
             />
             <Button 
               fullWidth
