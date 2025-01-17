@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { RiLockLine } from 'react-icons/ri'
 
 export default function LoginForm() {
-  const { register, handleSubmit } = useForm()
+  const { register, handleSubmit, formState: {errors, isValid} } = useForm()
   const onSubmit = (data: any) => {
     console.log(data)
   }
@@ -28,16 +28,21 @@ export default function LoginForm() {
               defaultValue=''
               label='Email'
               variant='bordered'
-              {...register('email')}
+              {...register('email', {required: 'You must provide an email address.'})}
+              isInvalid={!!errors.email}
+              errorMessage={errors.email?.message as string}
             />
             <Input 
               defaultValue=''
               label='Password'
               variant='bordered'
               type='password'
-              {...register('password')}
+              {...register('password', {required: 'You must provide a password.'})}
+              isInvalid={!!errors.password}
+              errorMessage={errors.password?.message as string}
             />
             <Button 
+              isDisabled={!isValid}
               fullWidth
               // color='warning' 
               type='submit'
