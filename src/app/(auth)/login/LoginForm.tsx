@@ -18,7 +18,7 @@ export default function LoginForm() {
             <RiLockLine size={30} className='text-[#ff4500]'/>
             <h1 className='text-3xl font-semibold uppercase'>Login</h1>
           </div>
-          <p className='text-[#111]'>Welcome back to ProGamers</p>         
+          <p className='text-[#111] text-center'>Welcome back to ProGamers</p>         
         </div>
       </CardHeader>
       <CardBody>
