@@ -1,12 +1,16 @@
 'use client'
 
+import { loginSchema, LoginSchema } from '@/lib/schemas/loginSchema'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Card, CardBody, CardHeader, Input } from '@nextui-org/react'
 import { useForm } from 'react-hook-form'
 import { RiLockLine } from 'react-icons/ri'
 
 export default function LoginForm() {
-  const { register, handleSubmit, formState: {errors, isValid} } = useForm()
-  const onSubmit = (data: any) => {
+  const { register, handleSubmit, formState: {errors, isValid} } = useForm<LoginSchema>({
+    resolver: zodResolver(loginSchema)
+  })
+  const onSubmit = (data: LoginSchema) => {
     console.log(data)
   }
 
