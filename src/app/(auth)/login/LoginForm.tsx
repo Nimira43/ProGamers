@@ -8,7 +8,8 @@ import { RiLockLine } from 'react-icons/ri'
 
 export default function LoginForm() {
   const { register, handleSubmit, formState: {errors, isValid} } = useForm<LoginSchema>({
-    resolver: zodResolver(loginSchema)
+    resolver: zodResolver(loginSchema),
+    mode: 'onTouched'
   })
   const onSubmit = (data: LoginSchema) => {
     console.log(data)
@@ -32,7 +33,7 @@ export default function LoginForm() {
               defaultValue=''
               label='Email'
               variant='bordered'
-              {...register('email', {required: 'You must provide an email address.'})}
+              {...register('email')}
               isInvalid={!!errors.email}
               errorMessage={errors.email?.message as string}
             />
@@ -41,7 +42,7 @@ export default function LoginForm() {
               label='Password'
               variant='bordered'
               type='password'
-              {...register('password', {required: 'You must provide a password.'})}
+              {...register('password')}
               isInvalid={!!errors.password}
               errorMessage={errors.password?.message as string}
             />
