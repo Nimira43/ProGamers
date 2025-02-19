@@ -1,13 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
+import RegisterForm from './RegisterForm'
 
 export default function RegisterPage() {
   return (
-    <div>
-      <h3 className='text-3xl'>Register Page</h3>
-      <Link href='/'>
-        Home
-      </Link>
+    <div className='flex items-center justify-center vertical-center'>
+      <RegisterForm />
     </div>
   )
 }

@@ -1,3 +1,5 @@
+'use client'
+
 import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Card, CardBody, CardHeader, Input} from '@nextui-org/react'
@@ -30,11 +32,19 @@ export default function RegisterForm() {
           <div className='space-y-4'>
             <Input 
               defaultValue=''
+              label='Name'
+              variant='bordered'
+              {...register('name')}
+              isInvalid={!!errors.name}
+              errorMessage={errors.name?.message}
+            />
+            <Input 
+              defaultValue=''
               label='Email'
               variant='bordered'
               {...register('email')}
               isInvalid={!!errors.email}
-              errorMessage={errors.email?.message as string}
+              errorMessage={errors.email?.message}
             />
             <Input 
               defaultValue=''
@@ -43,7 +53,7 @@ export default function RegisterForm() {
               type='password'
               {...register('password')}
               isInvalid={!!errors.password}
-              errorMessage={errors.password?.message as string}
+              errorMessage={errors.password?.message}
             />
             <Button 
               isDisabled={!isValid}
