@@ -53,7 +53,7 @@ export default function LoginForm() {
               type='submit'
               className='bg-[#111] text-opacity-100 text-[#fffaf0] font-semibold uppercase tracking-wide'
             >
-              Submit
+              Login
             </Button>
           </div>
         </form>

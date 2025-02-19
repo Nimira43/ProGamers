@@ -1,6 +1,6 @@
 import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Button, Card, CardBody, CardHeader} from '@nextui-org/react'
+import { Button, Card, CardBody, CardHeader, Input} from '@nextui-org/react'
 import { useForm } from 'react-hook-form'
 import { RiLockLine } from 'react-icons/ri'
 
@@ -20,9 +20,9 @@ export default function RegisterForm() {
         <div className='flex flex-col gap-2 items-center'>
           <div className='flex flex-row items-center gap-3'>
             <RiLockLine size={30} className='text-[#ff4500]'/>
-            <h1 className='text-3xl font-semibold uppercase'>Login</h1>
+            <h1 className='text-3xl font-semibold uppercase'>Register</h1>
           </div>
-          <p className='text-[#111] text-center'>Welcome back to ProGamers</p>         
+          <p className='text-[#111] text-center'>Welcome to ProGamers</p>         
         </div>
       </CardHeader>
       <CardBody>
@@ -51,7 +51,7 @@ export default function RegisterForm() {
               type='submit'
               className='bg-[#111] text-opacity-100 text-[#fffaf0] font-semibold uppercase tracking-wide'
             >
-              Submit
+              Register
             </Button>
           </div>
         </form>
