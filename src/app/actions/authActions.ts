@@ -1,6 +1,6 @@
 'user server'
 
-import { RegisterSchema } from '@/lib/schemas/registerSchema'
+import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
 
 export async function registerUser(data: RegisterSchema) {
   const validated = registerSchema.safeParse(data)
@@ -8,4 +8,6 @@ export async function registerUser(data: RegisterSchema) {
   if (!validated.success) {
     return {error: validated.error.errors}
   }
+
+  const {name, email, password} = validated.data
 }
