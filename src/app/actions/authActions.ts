@@ -1,5 +1,7 @@
-'user client'
+'user server'
 
 import { RegisterSchema } from '@/lib/schemas/registerSchema'
 
-export async function registerUser(data: RegisterSchema)
+export async function registerUser(data: RegisterSchema) {
+
+}
