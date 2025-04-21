@@ -9,5 +9,7 @@ export async function registerUser(data: RegisterSchema) {
     return {error: validated.error.errors}
   }
 
-  const {name, email, password} = validated.data
+  const { name, email, password } = validated.data
+  
+  
 }
