@@ -1,6 +1,7 @@
 'user server'
 
 import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
+import bcrypt from 'bcryptjs'
 
 export async function registerUser(data: RegisterSchema) {
   const validated = registerSchema.safeParse(data)
@@ -10,6 +11,5 @@ export async function registerUser(data: RegisterSchema) {
   }
 
   const { name, email, password } = validated.data
-  
-  
+  const hashedPassword = await bcrypt.hash(password, 10)
 }
