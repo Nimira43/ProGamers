@@ -17,4 +17,14 @@ export async function registerUser(data: RegisterSchema) {
   const existingUser = await prisma.user.findUnique({
     where: { email }
   })
+
+  if (existingUser) return { error: 'User already exists.' }
+  
+  return prisma.user.create({
+    data: {
+      name,
+      email,
+      passwordHash: hashedPassword
+    }
+  })
 }
