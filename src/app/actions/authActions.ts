@@ -2,7 +2,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
-import { ActionResult } from '../'
+import { ActionResult } from '@/types'
 import bcrypt from 'bcryptjs'
 
 export async function registerUser(data: RegisterSchema): Promise<ActionResult> {
