@@ -1,14 +1,13 @@
 'use client'
 
 import { registerUser } from '@/app/actions/authActions'
-import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { RegisterSchema } from '@/lib/schemas/registerSchema'
 import { Button, Card, CardBody, CardHeader, Input} from '@nextui-org/react'
 import { useForm } from 'react-hook-form'
 import { RiLockLine } from 'react-icons/ri'
 
 export default function RegisterForm() {
-  const { register, handleSubmit, formState: {errors, isValid} } = useForm<RegisterSchema>({
+  const { register, handleSubmit, setError, formState: {errors, isValid} } = useForm<RegisterSchema>({
     // resolver: zodResolver(registerSchema),
     mode: 'onTouched'
   })
@@ -17,6 +16,15 @@ export default function RegisterForm() {
     const result = await registerUser(data)
     if (result.status === 'success') {
       console.log('User registered successfully.')
+    } else {
+      if (Array.isArray(result.error)) {
+        result.error.forEach((e) => {
+          const fieldName = e.path.join('.') as 'email' | 'name' | 'password'
+          setError(fieldName, {message: e.message})
+        })
+      } else {
+        setError('root.serverError', {message: result.error })
+      }
     }
   }
 
