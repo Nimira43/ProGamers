@@ -12,6 +12,7 @@ const config: Config = {
     extend: {
       color: {
         'feature': '#ff4500',
+        'main': '#ff4500',
         'support': '#87ceeb',
         'dark': '#111',
         'light': '#fffcfa',

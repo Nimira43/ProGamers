@@ -67,6 +67,11 @@ export default function RegisterForm() {
               isInvalid={!!errors.password}
               errorMessage={errors.password?.message}
             />
+            {errors.root?.serverError && (
+              <p className='text-[#ff4500] text-sm'>
+                {errors.root.serverError.message}
+              </p>
+            )}
             <Button 
               isDisabled={!isValid}
               fullWidth
