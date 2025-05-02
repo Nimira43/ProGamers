@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form'
 import { RiLockLine } from 'react-icons/ri'
 
 export default function RegisterForm() {
-  const { register, handleSubmit, setError, formState: {errors, isValid} } = useForm<RegisterSchema>({
+  const { register, handleSubmit, setError, formState: {errors, isValid, isSubmitting} } = useForm<RegisterSchema>({
     // resolver: zodResolver(registerSchema),
     mode: 'onTouched'
   })
@@ -73,6 +73,7 @@ export default function RegisterForm() {
               </p>
             )}
             <Button 
+              isLoading={isSubmitting}
               isDisabled={!isValid}
               fullWidth
               type='submit'
