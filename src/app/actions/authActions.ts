@@ -2,9 +2,10 @@
 
 import { prisma } from '@/lib/prisma'
 import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
+import { ActionResult } from '../'
 import bcrypt from 'bcryptjs'
 
-export async function registerUser(data: RegisterSchema) {
+export async function registerUser(data: RegisterSchema): Promise<ActionResult> {
   
   try {
     const validated = registerSchema.safeParse(data)
