@@ -9,6 +9,12 @@ export default {
     async authorize(creds) {
       const validated = loginSchema.safeParse(creds)
     
+      if (validated.success) {
+        const { email, password } = validated.data
+        
+      }
+
+      return null
     }
   })],
 } satisfies NextAuthConfig
