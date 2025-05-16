@@ -23,7 +23,7 @@ export default function LoginForm() {
             <RiLockLine size={30} className='text-main'/>
             <h1 className='text-3xl font-semibold uppercase'>Login</h1>
           </div>
-          <p className='text-[#111] text-center'>Welcome back to ProGamers</p>         
+          <p className='text-dark text-center'>Welcome back to ProGamers</p>         
         </div>
       </CardHeader>
       <CardBody>
@@ -51,7 +51,7 @@ export default function LoginForm() {
               fullWidth
               // color='warning' 
               type='submit'
-              className='bg-[#111] text-opacity-100 text-[#fffaf0] font-semibold uppercase tracking-wide'
+              className='bg-dark text-opacity-100 text-light font-semibold uppercase tracking-wide'
             >
               Login
             </Button>
