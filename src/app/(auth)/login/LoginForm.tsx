@@ -20,7 +20,7 @@ export default function LoginForm() {
       <CardHeader className='flex flex-col items-center justify-center'>
         <div className='flex flex-col gap-2 items-center'>
           <div className='flex flex-row items-center gap-3'>
-            <RiLockLine size={30} className='text-[#ff4500]'/>
+            <RiLockLine size={30} className='text-main'/>
             <h1 className='text-3xl font-semibold uppercase'>Login</h1>
           </div>
           <p className='text-[#111] text-center'>Welcome back to ProGamers</p>         
