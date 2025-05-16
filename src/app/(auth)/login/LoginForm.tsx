@@ -51,7 +51,7 @@ export default function LoginForm() {
               fullWidth
               // color='warning' 
               type='submit'
-              className='bg-dark text-opacity-100 text-light font-semibold uppercase tracking-wide'
+              className='bg-dark text-opacity-100 text-light font-medium uppercase tracking-wide'
             >
               Login
             </Button>
