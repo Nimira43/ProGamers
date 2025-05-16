@@ -8,19 +8,19 @@ export default function TopNav() {
   return (
     <Navbar
       maxWidth='xl'
-      className='bg-[#111]'
+      className='bg-dark'
       classNames={{
         item: [
           'text-xl',
-          'text-[#fff]',
+          'text-light',
           'uppercase',
-          'data-[active=true]:text-[#ff4500]'
+          'data-[active=true]:text-main'
         ]
       }}
     >
       <NavbarBrand as={Link} href='/'>
         <TbDeviceGamepad3 size={40} color='white' />
-        <div className='font-bold text-3xl text-[#ff4500] flex'>
+        <div className='font-bold text-3xl text-main flex'>
           <span className='logo font-bold tracking-wider pl-2'>ProGamers</span>
         </div>
       </NavbarBrand>
@@ -34,7 +34,7 @@ export default function TopNav() {
           as={Link}
           href='/login'
           variant='bordered' 
-          className='text-[#fff] border-[#fff] hover:text-[#ff4500] hover:border-[#ff4500]'
+          className='uppercase text-light border-light hover:text-main hover:border-main'
         > 
           Login
         </Button>
@@ -42,7 +42,7 @@ export default function TopNav() {
           as={Link}
           href='/register' 
           variant='bordered' 
-          className='text-[#fff] border-[#fff] hover:text-[#ff4500] hover:border-[#ff4500]'
+          className='uppercase text-light border-light hover:text-main hover:border-main'
         > 
           Register
         </Button>
