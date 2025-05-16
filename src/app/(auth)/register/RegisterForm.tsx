@@ -33,10 +33,10 @@ export default function RegisterForm() {
       <CardHeader className='flex flex-col items-center justify-center'>
         <div className='flex flex-col gap-2 items-center'>
           <div className='flex flex-row items-center gap-3'>
-            <RiLockLine size={30} className='text-[#ff4500]'/>
+            <RiLockLine size={30} className='text-main'/>
             <h1 className='text-3xl font-semibold uppercase'>Register</h1>
           </div>
-          <p className='text-[#111] text-center'>Welcome to ProGamers</p>         
+          <p className='text-dark text-center'>Welcome to ProGamers</p>         
         </div>
       </CardHeader>
       <CardBody>
@@ -68,7 +68,7 @@ export default function RegisterForm() {
               errorMessage={errors.password?.message}
             />
             {errors.root?.serverError && (
-              <p className='text-[#ff4500] text-sm'>
+              <p className='text-main text-sm'>
                 {errors.root.serverError.message}
               </p>
             )}
@@ -77,7 +77,7 @@ export default function RegisterForm() {
               isDisabled={!isValid}
               fullWidth
               type='submit'
-              className='bg-[#111] text-opacity-100 text-[#fffaf0] font-semibold uppercase tracking-wide'
+              className='bg-dark text-opacity-100 text-light font-medium uppercase tracking-wide'
             >
               Register
             </Button>
