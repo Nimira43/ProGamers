@@ -4,10 +4,13 @@ import { signInUser } from '@/app/actions/authActions'
 import { loginSchema, LoginSchema } from '@/lib/schemas/loginSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Card, CardBody, CardHeader, Input } from '@nextui-org/react'
+import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { RiLockLine } from 'react-icons/ri'
 
 export default function LoginForm() {
+  const router = useRouter()
+  
   const {
     register,
     handleSubmit,
@@ -20,8 +23,14 @@ export default function LoginForm() {
     resolver: zodResolver(loginSchema),
     mode: 'onTouched'
   })
+  
   const onSubmit = async (data: LoginSchema) => {
-    const result = await signInUser
+    const result = await signInUser(data)
+    if (result.status === 'success') {
+      router.push('/members')
+    } else {
+      console.log(result.error)
+    }
   }
 
   return (
