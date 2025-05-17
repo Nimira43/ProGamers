@@ -1,5 +1,6 @@
 'use server'
 
+import { signIn } from '@/auth'
 import { prisma } from '@/lib/prisma'
 import { LoginSchema } from '@/lib/schemas/loginSchema'
 import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
@@ -9,7 +10,10 @@ import bcrypt from 'bcryptjs'
 
 export async function signInUser(data: LoginSchema): Promise<ActionResult<string>> {
   try {
-    
+    const result = await signIn('credentials', {
+      email: data.email,
+      password: data.password
+    })
   } catch (error) {
     
   }
