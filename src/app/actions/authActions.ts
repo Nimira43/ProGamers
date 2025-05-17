@@ -8,7 +8,11 @@ import { User } from '@prisma/client'
 import bcrypt from 'bcryptjs'
 
 export async function signInUser(data: LoginSchema): Promise<ActionResult<string>> {
-  
+  try {
+    
+  } catch (error) {
+    
+  }
 }
 
 export async function registerUser(data: RegisterSchema): Promise<ActionResult<User>> { 
