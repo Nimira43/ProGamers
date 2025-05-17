@@ -7,6 +7,7 @@ import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
 import { ActionResult } from '@/types'
 import { User } from '@prisma/client'
 import bcrypt from 'bcryptjs'
+import { AuthError } from 'next-auth'
 
 export async function signInUser(data: LoginSchema): Promise<ActionResult<string>> {
   try {
@@ -18,7 +19,15 @@ export async function signInUser(data: LoginSchema): Promise<ActionResult<string
     console.log(result)
     return {status: 'success', data: 'Logged In'}
   } catch (error) {
-    
+    console.log(error)
+    if (error instanceof AuthError) {
+      switch (error.type) {
+        case 'CredentialsSignin':
+          return {status: 'error', error: 'Invalid Credentials.'}
+        default:
+          return {status: 'error', error: 'Something went wrong.'}
+      }
+    }
   }
 }
 
