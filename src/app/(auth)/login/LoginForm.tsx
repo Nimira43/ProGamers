@@ -23,7 +23,7 @@ export default function LoginForm() {
     resolver: zodResolver(loginSchema),
     mode: 'onTouched'
   })
-  
+
   const onSubmit = async (data: LoginSchema) => {
     const result = await signInUser(data)
     if (result.status === 'success') {
@@ -65,9 +65,9 @@ export default function LoginForm() {
               errorMessage={errors.password?.message as string}
             />
             <Button 
+              isLoading = {isSubmitting}
               isDisabled={!isValid}
-              fullWidth
-              // color='warning' 
+              fullWidth 
               type='submit'
               className='bg-dark text-opacity-100 text-light font-medium uppercase tracking-wide'
             >
