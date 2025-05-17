@@ -1,5 +1,6 @@
 'use client'
 
+import { signInUser } from '@/app/actions/authActions'
 import { loginSchema, LoginSchema } from '@/lib/schemas/loginSchema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Card, CardBody, CardHeader, Input } from '@nextui-org/react'
@@ -7,12 +8,20 @@ import { useForm } from 'react-hook-form'
 import { RiLockLine } from 'react-icons/ri'
 
 export default function LoginForm() {
-  const { register, handleSubmit, formState: {errors, isValid} } = useForm<LoginSchema>({
+  const {
+    register,
+    handleSubmit,
+    formState: {
+      errors,
+      isValid,
+      isSubmitting
+    }
+  } = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
     mode: 'onTouched'
   })
-  const onSubmit = (data: LoginSchema) => {
-    console.log(data)
+  const onSubmit = async (data: LoginSchema) => {
+    const result = await signInUser
   }
 
   return (

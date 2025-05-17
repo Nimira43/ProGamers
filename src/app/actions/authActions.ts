@@ -28,7 +28,7 @@ export async function signInUser(data: LoginSchema): Promise<ActionResult<string
           return {status: 'error', error: 'Something went wrong.'}
       }
     } else {
-      return {status: 'error', error: 'Something went wrong.'}
+      return {status: 'error', error: 'Something really went wrong.'}
     }
   }
 }
