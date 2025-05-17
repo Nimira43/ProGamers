@@ -16,6 +16,7 @@ export async function signInUser(data: LoginSchema): Promise<ActionResult<string
       redirect: false
     })
     console.log(result)
+    return {status: 'success', data: 'Logged In'}
   } catch (error) {
     
   }
