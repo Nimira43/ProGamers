@@ -1,10 +1,15 @@
 'use server'
 
 import { prisma } from '@/lib/prisma'
+import { LoginSchema } from '@/lib/schemas/loginSchema'
 import { registerSchema, RegisterSchema } from '@/lib/schemas/registerSchema'
 import { ActionResult } from '@/types'
 import { User } from '@prisma/client'
 import bcrypt from 'bcryptjs'
+
+export async function signInUser(data: LoginSchema): Promise<ActionResult<string>> {
+  
+}
 
 export async function registerUser(data: RegisterSchema): Promise<ActionResult<User>> { 
   
