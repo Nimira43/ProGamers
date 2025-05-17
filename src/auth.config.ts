@@ -17,6 +17,8 @@ export default {
         const user = await getUserByEmail(email)
 
         if (!user || !(await compare(password, user.passwordHash))) return null
+      
+        return user
       }
 
       return null
