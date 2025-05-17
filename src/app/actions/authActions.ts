@@ -12,8 +12,10 @@ export async function signInUser(data: LoginSchema): Promise<ActionResult<string
   try {
     const result = await signIn('credentials', {
       email: data.email,
-      password: data.password
+      password: data.password,
+      redirect: false
     })
+    console.log(result)
   } catch (error) {
     
   }
