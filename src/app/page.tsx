@@ -1,4 +1,4 @@
-import { auth } from '@/auth'
+import { auth, signOut } from '@/auth'
 import { Button } from '@nextui-org/react'
 import Link from 'next/link'
 import React from 'react'
@@ -16,18 +16,22 @@ export default async function Home() {
           <pre>
             {JSON.stringify(session, null, 2)}
           </pre>
+          <form action={async () => {
+            'use server'
+            await signOut()
+          }}>
+            <Button
+              className='mt-5 btn'
+              type='submit'
+              startContent={<MdOutlineGames size={20} />}
+            >
+              Sign Out
+            </Button>
+          </form>
         </div>
       ) : (
         <div>Not Signed In</div>
       )}
-      <Button
-        className='mt-5 btn'
-        as={Link}
-        href='/members'
-        startContent={<MdOutlineGames size={20} />}
-      >
-        Play
-      </Button>
     </div>
   )
 }
