@@ -21,7 +21,7 @@ export default async function Home() {
         <div>Not Signed In</div>
       )}
       <Button
-        className='btn'
+        className='mt-5 btn'
         as={Link}
         href='/members'
         startContent={<MdOutlineGames size={20} />}
