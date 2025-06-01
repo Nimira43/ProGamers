@@ -3,7 +3,10 @@ import Link from 'next/link'
 import React from 'react'
 import { MdOutlineGames } from "react-icons/md"
 
-export default function Home() {
+export default async function Home() {
+
+  
+
   return (
     <div className='m-20'>
       <h1 className='text-4xl mb-5'>Welcome to ProGamers</h1>
