@@ -3,7 +3,7 @@
 import { NavbarItem } from '@nextui-org/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React from 'react'
+// import React from 'react'
 
 type NavLinkProps = {
   href: string

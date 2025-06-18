@@ -1,7 +1,6 @@
 import { auth, signOut } from '@/auth'
 import { Button } from '@nextui-org/react'
-import Link from 'next/link'
-import React from 'react'
+// import React from 'react'
 import { MdOutlineGames } from "react-icons/md"
 
 export default async function Home() {
