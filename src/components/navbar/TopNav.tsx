@@ -4,7 +4,7 @@ import { TbDeviceGamepad3 } from 'react-icons/tb'
 import Link from 'next/link'
 import NavLink from './NavLink'
 
-export default function TopNav() {
+export default async function TopNav() {
   return (
     <Navbar
       maxWidth='xl'
