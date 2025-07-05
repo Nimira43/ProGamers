@@ -1,4 +1,4 @@
-import { Dropdown } from '@nextui-org/react'
+import { Avatar, Dropdown, DropdownTrigger } from '@nextui-org/react'
 import { Session } from 'next-auth'
 
 type Props = {
@@ -7,8 +7,10 @@ type Props = {
 
 export default function UserMenu({user}: Props) {
   return (
-    <Dropdown>
-      
+    <Dropdown placement='bottom-end'>
+      <DropdownTrigger>
+        <Avatar></Avatar>
+      </DropdownTrigger>
     </Dropdown>
   )
 }
