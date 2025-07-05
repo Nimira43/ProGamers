@@ -27,9 +27,10 @@ export default function UserMenu({user}: Props) {
           <DropdownItem
             isReadOnly
             as='span'
-            className='h-14 flex'
+            className='h-14 flex flex-row'
+            aria-label='Username'
           >
-
+            Signed in as {user?.name}
           </DropdownItem>
         </DropdownSection>
       </DropdownMenu>
