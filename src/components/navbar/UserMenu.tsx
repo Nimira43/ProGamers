@@ -9,7 +9,11 @@ export default function UserMenu({user}: Props) {
   return (
     <Dropdown placement='bottom-end'>
       <DropdownTrigger>
-        <Avatar></Avatar>
+        <Avatar 
+          isBordered
+          as='button'
+          className='transition-transform'
+        />
       </DropdownTrigger>
     </Dropdown>
   )
