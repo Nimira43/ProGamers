@@ -1,4 +1,4 @@
-import { Avatar, Dropdown, DropdownMenu, DropdownSection, DropdownTrigger } from '@nextui-org/react'
+import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger } from '@nextui-org/react'
 import { Session } from 'next-auth'
 
 type Props = {
@@ -24,7 +24,13 @@ export default function UserMenu({user}: Props) {
         aria-label='User actions menu'      
       >
         <DropdownSection showDivider>
+          <DropdownItem
+            isReadOnly
+            as='span'
+            className='h-14 flex'
+          >
 
+          </DropdownItem>
         </DropdownSection>
       </DropdownMenu>
     </Dropdown>
