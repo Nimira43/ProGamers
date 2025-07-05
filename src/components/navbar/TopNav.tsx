@@ -4,6 +4,7 @@ import { TbDeviceGamepad3 } from 'react-icons/tb'
 import Link from 'next/link'
 import NavLink from './NavLink'
 import { auth } from '@/auth'
+import UserMenu from './UserMenu'
 
 export default async function TopNav() {
   const session = await auth()
@@ -33,22 +34,29 @@ export default async function TopNav() {
         <NavLink href='/messages' label='Messages' />
       </NavbarContent>
       <NavbarContent justify='end'>
-        <Button 
-          as={Link}
-          href='/login'
-          variant='bordered' 
-          className='uppercase text-light border-light hover:text-main hover:border-main'
-        > 
-          Login
-        </Button>
-        <Button
-          as={Link}
-          href='/register' 
-          variant='bordered' 
-          className='uppercase text-light border-light hover:text-main hover:border-main'
-        > 
-          Register
-        </Button>
+        {session?.user ? (
+          <UserMenu user={session.user} />
+        ) : (
+          <>
+            <Button 
+              as={Link}
+              href='/login'
+              variant='bordered' 
+              className='uppercase text-light border-light hover:text-main hover:border-main'
+            > 
+              Login
+            </Button>
+            <Button
+              as={Link}
+              href='/register' 
+              variant='bordered' 
+              className='uppercase text-light border-light hover:text-main hover:border-main'
+            > 
+              Register
+            </Button>
+          </>
+        )}
+        
       </NavbarContent>
     </Navbar>
   )
