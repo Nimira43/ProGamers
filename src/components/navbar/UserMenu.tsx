@@ -13,6 +13,10 @@ export default function UserMenu({user}: Props) {
           isBordered
           as='button'
           className='transition-transform'
+          color='secondary'
+          name={user?.name || 'user avatar'}
+          size='sm'
+          src={user?.image || '/images/user.png'}
         />
       </DropdownTrigger>
     </Dropdown>
