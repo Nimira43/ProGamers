@@ -1,4 +1,4 @@
-import { Avatar, Dropdown, DropdownTrigger } from '@nextui-org/react'
+import { Avatar, Dropdown, DropdownMenu, DropdownSection, DropdownTrigger } from '@nextui-org/react'
 import { Session } from 'next-auth'
 
 type Props = {
@@ -19,6 +19,14 @@ export default function UserMenu({user}: Props) {
           src={user?.image || '/images/user.png'}
         />
       </DropdownTrigger>
+      <DropdownMenu
+        variant='flat'
+        aria-label='User actions menu'      
+      >
+        <DropdownSection showDivider>
+
+        </DropdownSection>
+      </DropdownMenu>
     </Dropdown>
   )
 }
