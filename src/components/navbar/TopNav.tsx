@@ -3,8 +3,11 @@ import { TbDeviceGamepad3 } from 'react-icons/tb'
 // import React from 'react'
 import Link from 'next/link'
 import NavLink from './NavLink'
+import { auth } from '@/auth'
 
 export default async function TopNav() {
+  const session = await auth()
+
   return (
     <Navbar
       maxWidth='xl'
