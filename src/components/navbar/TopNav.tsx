@@ -1,6 +1,6 @@
 import { Button, Navbar, NavbarBrand, NavbarContent} from '@nextui-org/react'
 import { TbDeviceGamepad3 } from 'react-icons/tb'
-// import React from 'react'
+import React from 'react'
 import Link from 'next/link'
 import NavLink from './NavLink'
 import { auth } from '@/auth'

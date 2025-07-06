@@ -1,9 +1,11 @@
 'use client'
 
-import { signOut } from '@/auth'
+// import { signOut } from 'next-auth/react'
+// import { signOut } from '@/auth'
 import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger } from '@nextui-org/react'
 import { Session } from 'next-auth'
 import Link from 'next/link'
+import React from 'react'
 
 type Props = {
   user: Session['user']
@@ -29,7 +31,7 @@ export default function UserMenu({user}: Props) {
       >
         <DropdownSection showDivider>
           <DropdownItem
-            key='signInAs'
+            // key='signInAs'
             isReadOnly
             as='span'
             className='h-14 flex flex-row'
@@ -39,20 +41,19 @@ export default function UserMenu({user}: Props) {
           </DropdownItem>
         </DropdownSection>
         <DropdownItem 
-          key='editProfile'
+          // key='editProfile'
           as={Link}
           href='/members/edit'
         >
           Edit Profile
         </DropdownItem>
-        <DropdownItem
-          key='logoOut'
+        {/* <DropdownItem
           color='danger' 
           as={Link}
-          onPress={async () => signOut()} // if onPress doesn't work try onClick
+          onClick={async () => signOut()}
         >
           Logout
-        </DropdownItem>
+        </DropdownItem> */}
       </DropdownMenu>
     </Dropdown>
   )
