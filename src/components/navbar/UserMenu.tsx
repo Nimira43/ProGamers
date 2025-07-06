@@ -18,8 +18,9 @@ export default function UserMenu({user}: Props) {
         <Avatar 
           isBordered
           as='button'
-          className='transition-transform'
-          color='secondary'
+          className='transition-transform orange'
+          // color='second
+          // ry'
           name={user?.name || 'user avatar'}
           size='sm'
           src={user?.image || '/images/user.png'}
@@ -31,7 +32,6 @@ export default function UserMenu({user}: Props) {
       >
         <DropdownSection showDivider>
           <DropdownItem
-            // key='signInAs'
             isReadOnly
             as='span'
             className='h-14 flex flex-row'
@@ -41,7 +41,6 @@ export default function UserMenu({user}: Props) {
           </DropdownItem>
         </DropdownSection>
         <DropdownItem 
-          // key='editProfile'
           as={Link}
           href='/members/edit'
         >

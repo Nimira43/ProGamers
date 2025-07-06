@@ -8,17 +8,24 @@
   * {
     font-family: 'Poppins', sans-serif;
   }
+
   .vertical-center {
     height: calc(100vh - 64px);
   }
+
   .logo {
     font-family: 'Amatic SC', sans-serif;
   }
+
   .btn {
     background-color: #ff4500 !important;
     color: #fffcfa !important;
     text-transform: uppercase !important;
     letter-spacing: 1px;
+  }
+
+  .orange {
+    background-color: #ff4500 !important;
   }
 }
 
