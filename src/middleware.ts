@@ -17,5 +17,8 @@ export default auth((req) => {
     if (isLoggedIn) {
       return NextResponse.redirect(new URL('/members', nextUrl))
     }
+    return NextResponse.next()
   }
+
+  
 })
