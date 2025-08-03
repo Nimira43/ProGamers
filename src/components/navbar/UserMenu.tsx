@@ -19,8 +19,7 @@ export default function UserMenu({user}: Props) {
           isBordered
           as='button'
           className='transition-transform orange'
-          // color='second
-          // ry'
+          // color='primary'
           name={user?.name || 'user avatar'}
           size='sm'
           src={user?.image || '/images/user.png'}
