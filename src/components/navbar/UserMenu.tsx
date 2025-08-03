@@ -1,7 +1,6 @@
 'use client'
 
-// import { signOut } from 'next-auth/react'
-// import { signOut } from '@/auth'
+import { signOutUser } from '@/app/actions/authActions'
 import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger } from '@nextui-org/react'
 import { Session } from 'next-auth'
 import Link from 'next/link'
@@ -19,10 +18,9 @@ export default function UserMenu({user}: Props) {
           isBordered
           as='button'
           className='transition-transform orange'
-          // color='primary'
           name={user?.name || 'user avatar'}
           size='sm'
-          src={user?.image || '/images/user.png'}
+          src={user?.image || '/images/user.jpg'}
         />
       </DropdownTrigger>
       <DropdownMenu
@@ -45,13 +43,12 @@ export default function UserMenu({user}: Props) {
         >
           Edit Profile
         </DropdownItem>
-        {/* <DropdownItem
+        <DropdownItem
           color='danger' 
-          as={Link}
-          onClick={async () => signOut()}
+          onClick={async () => signOutUser()}
         >
           Logout
-        </DropdownItem> */}
+        </DropdownItem>
       </DropdownMenu>
     </Dropdown>
   )
