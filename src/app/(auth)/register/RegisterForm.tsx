@@ -1,14 +1,15 @@
 'use client'
 
 import { registerUser } from '@/app/actions/authActions'
-import { RegisterSchema } from '@/lib/schemas/registerSchema'
+import { RegisterSchema, registerSchema } from '@/lib/schemas/registerSchema'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Card, CardBody, CardHeader, Input} from '@nextui-org/react'
 import { useForm } from 'react-hook-form'
 import { RiLockLine } from 'react-icons/ri'
 
 export default function RegisterForm() {
   const { register, handleSubmit, setError, formState: {errors, isValid, isSubmitting} } = useForm<RegisterSchema>({
-    // resolver: zodResolver(registerSchema),
+    resolver: zodResolver(registerSchema),
     mode: 'onTouched'
   })
 
