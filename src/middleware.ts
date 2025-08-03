@@ -1,3 +1,4 @@
+import { NextResponse } from 'next/server'
 import { auth } from './auth'
 import { authRoutes, publicRoutes } from './routes'
 
@@ -7,4 +8,9 @@ export default auth((req) => {
 
   const isPublic = publicRoutes.includes(nextUrl.pathname)
   const isAuthRoute = authRoutes.includes(nextUrl.pathname)
+
+  if (isPublic) {
+    return NextResponse.next()
+  }
+
 })
