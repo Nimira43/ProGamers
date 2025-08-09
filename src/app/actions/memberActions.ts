@@ -12,7 +12,7 @@ export async function getMembers() {
     return prisma.member.findMany({
       where: {
         NOT: {
-          userId:
+          userId: session.user.id
         }
       }
     })
