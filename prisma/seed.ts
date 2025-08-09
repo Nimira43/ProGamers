@@ -33,3 +33,7 @@ async function seedMembers() {
     }
   }))
 }
+
+async function main() {
+  await seedMembers()
+}
