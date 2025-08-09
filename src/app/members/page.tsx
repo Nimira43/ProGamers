@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { getMembers } from '../actions/memberActions'
 
 export default async function MembersPage() {
@@ -7,10 +6,13 @@ export default async function MembersPage() {
 
   return (
     <div>
-      <h3 className='text-3xl'>Members Page</h3>
-      <Link href='/'>
-        Home
-      </Link>
+      <ul>
+        {members && members.map(member => (
+          <li key={member.id}>
+            {member.name}
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
