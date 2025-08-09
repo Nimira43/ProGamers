@@ -19,6 +19,15 @@ async function seedMembers() {
           name: member.name,
           created: new Date(member.created),
           updated: new Date(member.lastActive),
+          description: member.description,
+          city: member.city,
+          country: member.country,
+          image: member.image,
+          photos: {
+            create: {
+              url: member.image,
+            }
+          }
         }
       }
     }
