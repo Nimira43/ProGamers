@@ -11,6 +11,16 @@ async function seedMembers() {
       emailVerified: new Date(),
       name: member.name,
       passwordHash: await hash('password', 10),
+      image: member.image,
+      member: {
+        create: {
+          dateOfBirth: new Date(member.dateOfBirth),
+          gender: member.gender,
+          name: member.name,
+          created: new Date(member.created),
+          updated: new Date(member.lastActive),
+        }
+      }
     }
   }))
 }
