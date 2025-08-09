@@ -23,7 +23,7 @@ export const membersData = [
     description: "Cyberpunk junkie and stealth game purist. I main Dishonored, Deus Ex, and anything with cloaking mechanics. I stream late-night infiltration runs and build immersive UI overlays for my viewers.",
     city: "Calgary",
     country: "Canada",
-    image: "/images/m2.jpeg"
+    image: "/images/m1.jpeg"
   },
   {
     email: "pixelwitch@manaquest.io",
@@ -36,7 +36,7 @@ export const membersData = [
     description: "Indie dev and cosy gamer. Stardew Valley, Spiritfarer, and potion-crafting sims are my jam. I design witchy-themed UI kits and host chill dev streams where we build magical interfaces together.",
     city: "Turriff",
     country: "Scotland",
-    image: "/images/f3.jpeg"
+    image: "/images/f2.jpeg"
   },
   {
     email: "rex@mecharena.org",
@@ -49,7 +49,7 @@ export const membersData = [
     description: "Mech pilot since the PS2 era. I live for armored warfare and twitch reflexes—Armored Core, Titanfall, and Gundam Versus. I build custom controller rigs and run a Discord for mech sim enthusiasts.",
     city: "Seattle",
     country: "USA",
-    image: "/images/m4.jpeg"
+    image: "/images/m2.jpeg"
   },
   {
     email: "echo@dreamloop.gg",
@@ -62,7 +62,7 @@ export const membersData = [
     description: "Narrative designer and rhythm game addict. I write branching storylines for visual novels and remix game soundtracks in my spare time. Favourite titles: Celeste, Sayonara Wild Hearts, and Omori.",
     city: "Perth",
     country: "Australia",
-    image: "/images/f5.jpeg"
+    image: "/images/f3.jpeg"
   },
   {
     email: "glitchqueen@respawn.gg",
@@ -75,7 +75,7 @@ export const membersData = [
     description: "Speedrunner and bug hunter. I break games for fun—whether it's clipping through walls in Skyrim or frame-perfect skips in Hollow Knight. I document exploits and run glitch showcases on my channel.",
     city: "Munich",
     country: "Germany",
-    image: "/images/f6.jpeg"
+    image: "/images/f4.jpeg"
   },
   {
     email: "paladin@lootforge.com",
@@ -88,7 +88,7 @@ export const membersData = [
     description: "Tank main and raid leader. I’ve been grinding MMOs since EverQuest and still lead weekly dungeon runs in FFXIV. I write guides for new players and manage a guild with over 300 members.",
     city: "Stafford",
     country: "England",
-    image: "/images/m7.jpeg"
+    image: "/images/m3.jpeg"
   },
   {
     email: "neonfox@arcadia.gg",
@@ -101,7 +101,7 @@ export const membersData = [
     description: "Retro arcade lover and synthwave DJ. I collect CRTs and speedrun classics like Contra and Castlevania. My streams blend gameplay with live music sets and neon-lit overlays.",
     city: "Rochdale",
     country: "UK",
-    image: "/images/f8.jpeg"
+    image: "/images/f5.jpeg"
   },
   {
     email: "drift@trackmania.io",
@@ -114,7 +114,7 @@ export const membersData = [
     description: "Racer and physics nerd. I build custom tracks in Trackmania and analyse driving mechanics in sim racers. My YouTube channel breaks down drift theory and car tuning for beginners.",
     city: "Milan",
     country: "Italy",
-    image: "/images/m9.jpeg"
+    image: "/images/m4.jpeg"
   },
   {
     email: "oracle@dreamforge.gg",
@@ -127,6 +127,6 @@ export const membersData = [
     description: "Lore master and puzzle solver. I dive deep into narrative games like The Witness, Outer Wilds, and Return of the Obra Dinn. I host theorycrafting sessions and write fan essays decoding game symbolism.",
     city: "Cork",
     country: "Ireland",
-    image: "/images/m10.jpeg"
+    image: "/images/m5.jpeg"
   }
 ]
