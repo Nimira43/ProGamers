@@ -100,7 +100,7 @@ export const membersData = [
     lastActive: "2025-02-09",
     description: "Retro arcade lover and synthwave DJ. I collect CRTs and speedrun classics like Contra and Castlevania. My streams blend gameplay with live music sets and neon-lit overlays.",
     city: "Synth City",
-    country: "Japan",
+    country: "UK",
     image: "/images/f8.jpeg"
   },
   {
@@ -119,7 +119,7 @@ export const membersData = [
   {
     email: "oracle@dreamforge.gg",
     username: "oracle",
-    gender: "non-binary",
+    gender: "male",
     dateOfBirth: "1990-05-16",
     name: "Sage",
     created: "2018-08-28",
