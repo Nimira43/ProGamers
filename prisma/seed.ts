@@ -37,3 +37,10 @@ async function seedMembers() {
 async function main() {
   await seedMembers()
 }
+
+main().catch(e => {
+  console.error(e)
+  process.exit(1)
+}).finally(async () => {
+  await prisma.$disconnect()
+})
