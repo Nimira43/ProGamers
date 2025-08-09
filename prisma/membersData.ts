@@ -8,7 +8,7 @@ export const membersData = [
     created: "2021-03-15",
     lastActive: "2023-11-02",
     description: "Tactical strategist with a soft spot for pixel art. I thrive in turn-based RPGs and love dissecting game mechanics. My current obsession? Modding Fire Emblem maps and writing lore for my custom campaigns.",
-    city: "Eindel",
+    city: "Rotterdam",
     country: "Netherlands",
     image: "/images/f1.jpeg"
   },
@@ -21,7 +21,7 @@ export const membersData = [
     created: "2020-07-08",
     lastActive: "2024-05-19",
     description: "Cyberpunk junkie and stealth game purist. I main Dishonored, Deus Ex, and anything with cloaking mechanics. I stream late-night infiltration runs and build immersive UI overlays for my viewers.",
-    city: "Brume",
+    city: "Calgary",
     country: "Canada",
     image: "/images/m2.jpeg"
   },
@@ -34,7 +34,7 @@ export const membersData = [
     created: "2018-11-30",
     lastActive: "2023-08-21",
     description: "Indie dev and cosy gamer. Stardew Valley, Spiritfarer, and potion-crafting sims are my jam. I design witchy-themed UI kits and host chill dev streams where we build magical interfaces together.",
-    city: "Thistlebrook",
+    city: "Turriff",
     country: "Scotland",
     image: "/images/f3.jpeg"
   },
@@ -47,7 +47,7 @@ export const membersData = [
     created: "2019-06-22",
     lastActive: "2024-12-01",
     description: "Mech pilot since the PS2 era. I live for armored warfare and twitch reflexes—Armored Core, Titanfall, and Gundam Versus. I build custom controller rigs and run a Discord for mech sim enthusiasts.",
-    city: "Ironvale",
+    city: "Seattle",
     country: "USA",
     image: "/images/m4.jpeg"
   },
@@ -60,7 +60,7 @@ export const membersData = [
     created: "2022-04-10",
     lastActive: "2025-01-17",
     description: "Narrative designer and rhythm game addict. I write branching storylines for visual novels and remix game soundtracks in my spare time. Favourite titles: Celeste, Sayonara Wild Hearts, and Omori.",
-    city: "Lunaris",
+    city: "Perth",
     country: "Australia",
     image: "/images/f5.jpeg"
   },
@@ -73,7 +73,7 @@ export const membersData = [
     created: "2020-02-19",
     lastActive: "2024-10-03",
     description: "Speedrunner and bug hunter. I break games for fun—whether it's clipping through walls in Skyrim or frame-perfect skips in Hollow Knight. I document exploits and run glitch showcases on my channel.",
-    city: "Nova Reach",
+    city: "Munich",
     country: "Germany",
     image: "/images/f6.jpeg"
   },
@@ -86,7 +86,7 @@ export const membersData = [
     created: "2017-09-14",
     lastActive: "2023-12-22",
     description: "Tank main and raid leader. I’ve been grinding MMOs since EverQuest and still lead weekly dungeon runs in FFXIV. I write guides for new players and manage a guild with over 300 members.",
-    city: "Stonehelm",
+    city: "Stafford",
     country: "England",
     image: "/images/m7.jpeg"
   },
@@ -99,7 +99,7 @@ export const membersData = [
     created: "2021-06-11",
     lastActive: "2025-02-09",
     description: "Retro arcade lover and synthwave DJ. I collect CRTs and speedrun classics like Contra and Castlevania. My streams blend gameplay with live music sets and neon-lit overlays.",
-    city: "Synth City",
+    city: "Rochdale",
     country: "UK",
     image: "/images/f8.jpeg"
   },
@@ -112,7 +112,7 @@ export const membersData = [
     created: "2019-10-05",
     lastActive: "2024-07-30",
     description: "Racer and physics nerd. I build custom tracks in Trackmania and analyse driving mechanics in sim racers. My YouTube channel breaks down drift theory and car tuning for beginners.",
-    city: "Gearford",
+    city: "Milan",
     country: "Italy",
     image: "/images/m9.jpeg"
   },
@@ -125,7 +125,7 @@ export const membersData = [
     created: "2018-08-28",
     lastActive: "2025-03-04",
     description: "Lore master and puzzle solver. I dive deep into narrative games like The Witness, Outer Wilds, and Return of the Obra Dinn. I host theorycrafting sessions and write fan essays decoding game symbolism.",
-    city: "Mythmere",
+    city: "Cork",
     country: "Ireland",
     image: "/images/m10.jpeg"
   }
