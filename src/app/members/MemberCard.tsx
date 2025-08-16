@@ -1,3 +1,4 @@
+import { Card, Image } from '@nextui-org/react'
 import { Member } from '@prisma/client'
 
 type Props = {
@@ -6,6 +7,11 @@ type Props = {
 
 export default function MemberCard({member}: Props) {
   return (
-    <div>MemberCard</div>
+    <Card fullWidth>
+      <Image 
+        isZoomed
+        alt={member.name}
+      />
+    </Card>
   )
 }
