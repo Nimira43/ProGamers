@@ -11,6 +11,9 @@ export default function MemberCard({member}: Props) {
       <Image 
         isZoomed
         alt={member.name}
+        width={300}
+        src={member.image || '/images/user.png'}
+        className='aspect-square object-cover'
       />
     </Card>
   )
