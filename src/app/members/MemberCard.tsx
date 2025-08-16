@@ -4,7 +4,7 @@ type Props = {
   member: Member
 }
 
-export default function MemberCard() {
+export default function MemberCard({member}: Props) {
   return (
     <div>MemberCard</div>
   )
