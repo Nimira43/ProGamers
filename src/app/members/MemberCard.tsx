@@ -1,4 +1,4 @@
-import { Card, Image } from '@nextui-org/react'
+import { Card, CardFooter, Image } from '@nextui-org/react'
 import { Member } from '@prisma/client'
 
 type Props = {
@@ -15,6 +15,12 @@ export default function MemberCard({member}: Props) {
         src={member.image || '/images/user.png'}
         className='aspect-square object-cover'
       />
+      <CardFooter>
+        <div className='flex flex-col text-light'>
+          <span className='font-medium'>{member.name}</span>
+          <span className='text-sm'>{member.city}</span>
+        </div>
+      </CardFooter>
     </Card>
   )
 }
