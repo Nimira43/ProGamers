@@ -1,5 +1,6 @@
 import { Card, CardFooter, Image } from '@nextui-org/react'
 import { Member } from '@prisma/client'
+import Link from 'next/link'
 
 type Props = {
   member: Member
@@ -7,7 +8,12 @@ type Props = {
 
 export default function MemberCard({member}: Props) {
   return (
-    <Card fullWidth>
+    <Card 
+      fullWidth
+      as={Link}
+      href={`/members/${member.userId}`}
+    
+    >
       <Image 
         isZoomed
         alt={member.name}
