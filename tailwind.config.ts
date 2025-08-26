@@ -20,6 +20,9 @@ const config: Config = {
         'grey-light': '#ccc',
         'grey-light-extra': '#eee',
       },
+      backgroundImage: {
+        'dark-gradient': 'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)'
+      }
     },
   },
   darkMode: 'class',

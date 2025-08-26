@@ -15,7 +15,9 @@ export default function MemberCard({member}: Props) {
         src={member.image || '/images/user.png'}
         className='aspect-square object-cover'
       />
-      <CardFooter>
+      <CardFooter 
+        className='flex justify-start bg-dark bg-dark-gradient overflow-hidden absolute bottom-0 z-10'
+      >
         <div className='flex flex-col text-light'>
           <span className='font-medium'>{member.name}</span>
           <span className='text-sm'>{member.city}</span>
