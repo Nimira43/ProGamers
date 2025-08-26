@@ -12,7 +12,7 @@ export default function MemberCard({member}: Props) {
       fullWidth
       as={Link}
       href={`/members/${member.userId}`}
-    
+      isPressable
     >
       <Image 
         isZoomed
