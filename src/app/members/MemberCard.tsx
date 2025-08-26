@@ -1,3 +1,4 @@
+import { calculateAge } from '@/lib/util'
 import { Card, CardFooter, Image } from '@nextui-org/react'
 import { Member } from '@prisma/client'
 import Link from 'next/link'
@@ -25,7 +26,11 @@ export default function MemberCard({member}: Props) {
         className='flex justify-start bg-dark bg-dark-gradient overflow-hidden absolute bottom-0 z-10'
       >
         <div className='flex flex-col text-light'>
-          <span className='font-medium'>{member.name}</span>
+          <span 
+            className='font-medium'
+          >
+            {member.name}, {calculateAge(member.dateOfBirth)}
+          </span>
           <span className='text-sm'>{member.city}</span>
         </div>
       </CardFooter>
