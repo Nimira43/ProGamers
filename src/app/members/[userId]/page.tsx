@@ -1,5 +1,9 @@
-export default function MemberDetailedPage() {
+export default function MemberDetailedPage({
+  params
+}: {
+  params: {userId: string}
+}) {
   return (
-    <div>MemberDetailedPage</div>
+    <div>{params.userId}</div>
   )
 }
