@@ -20,3 +20,11 @@ export async function getMembers() {
     console.log(error)
   }
 }
+
+export async function getMemberByUserId(userId: string) {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
