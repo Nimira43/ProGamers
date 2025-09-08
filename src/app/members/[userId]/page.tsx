@@ -1,4 +1,5 @@
 import { getMemberByUserId } from '@/app/actions/memberActions'
+import { notFound } from 'next/navigation'
 
 export default async function MemberDetailedPage({
   params
@@ -7,7 +8,9 @@ export default async function MemberDetailedPage({
 }) {
   const member = await getMemberByUserId(params.userId)
 
+  if (!member) return notFound()
+
   return (
-    <div>{params.userId}</div>
+    <div>{member.name}</div>
   )
 }
