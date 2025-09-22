@@ -1,4 +1,5 @@
-import { Card, Image } from '@nextui-org/react'
+import { calculateAge } from '@/lib/util'
+import { Card, CardBody, Divider, Image } from '@nextui-org/react'
 import { Member } from '@prisma/client'
 
 type Props = {
@@ -34,6 +35,18 @@ export default function MemberSidebar({member}: Props) {
         alt='User Profile Image'
         className='rounded-full mt-6 aspect-square object-cover'
       />
+      <CardBody>
+        <div className='flex flex-col items-center'>
+          <div className='text-2xl'>
+            {member.name}, {calculateAge(member.dateOfBirth)}
+          </div>
+          <div className='text-sm text-grey-dark'>
+            {member.city}, {member.country}
+          </div>
+        </div>
+        <Divider className='my-3' />
+        
+      </CardBody>
 
     </Card>
   )
