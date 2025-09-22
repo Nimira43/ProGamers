@@ -22,6 +22,7 @@
     color: #fffcfa !important;
     text-transform: uppercase !important;
     letter-spacing: 1px;
+    border-radius: 3px !important;
   }
 
   .orange {

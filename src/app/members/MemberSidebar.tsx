@@ -73,7 +73,7 @@ export default function MemberSidebar({member}: Props) {
           as={Link}
           href='/members'
           fullWidth
-          className='bg-dark text-light'
+          className='btn'
         >
           Go Back
         </Button>
