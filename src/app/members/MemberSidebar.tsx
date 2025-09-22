@@ -65,7 +65,6 @@ export default function MemberSidebar({member}: Props) {
           )) }
         </nav>
       </CardBody>
-      
       <CardFooter>
         <Button
           as={Link}
