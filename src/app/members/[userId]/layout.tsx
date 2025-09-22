@@ -1,12 +1,15 @@
+import { getMemberByUserId } from '@/app/actions/memberActions'
 import { ReactNode } from 'react'
 
-export default function Layout({
+export default async function Layout({
   children, 
   params
 }:{
   children: ReactNode,
   params: {userId: string}
 }) {
+  const member = await getMemberByUserId(params.userId)
+
   return (
     <div>layout</div>
   )
