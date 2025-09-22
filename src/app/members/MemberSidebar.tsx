@@ -1,3 +1,5 @@
+'use client'
+
 import { calculateAge } from '@/lib/util'
 import { Button, Card, CardBody, CardFooter, Divider, Image } from '@nextui-org/react'
 import { Member } from '@prisma/client'
@@ -65,7 +67,7 @@ export default function MemberSidebar({member}: Props) {
           )) }
         </nav>
       </CardBody>
-      
+
       <CardFooter>
         <Button
           as={Link}
