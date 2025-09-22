@@ -21,8 +21,10 @@
     background-color: #ff4500 !important;
     color: #fffcfa !important;
     text-transform: uppercase !important;
-    letter-spacing: 1px;
+    font-weight: 500 !important;
+    letter-spacing: 1px !important;
     border-radius: 3px !important;
+    border: none !important; 
   }
 
   .orange {

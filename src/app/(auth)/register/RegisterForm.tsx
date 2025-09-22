@@ -78,7 +78,7 @@ export default function RegisterForm() {
               isDisabled={!isValid}
               fullWidth
               type='submit'
-              className='bg-dark text-opacity-100 text-light font-medium uppercase tracking-wide'
+              className='btn'
             >
               Register
             </Button>

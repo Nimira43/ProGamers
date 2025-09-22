@@ -42,7 +42,7 @@ export default async function TopNav() {
               as={Link}
               href='/login'
               variant='bordered' 
-              className='uppercase text-light border-light hover:text-main hover:border-main'
+              className='btn'
             > 
               Login
             </Button>
@@ -50,7 +50,7 @@ export default async function TopNav() {
               as={Link}
               href='/register' 
               variant='bordered' 
-              className='uppercase text-light border-light hover:text-main hover:border-main'
+              className='btn'
             > 
               Register
             </Button>
