@@ -2,14 +2,16 @@ import { calculateAge } from '@/lib/util'
 import { Card, CardBody, Divider, Image } from '@nextui-org/react'
 import { Member } from '@prisma/client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 type Props = {
   member: Member
 }
 
 export default function MemberSidebar({member}: Props) {
+  const pathName = usePathname()
   const basePath = `/members/${member.userId}`
-  
+    
   const navLinks = [
     {
       name: 'Profile',
@@ -51,7 +53,12 @@ export default function MemberSidebar({member}: Props) {
             <Link
               href={link.href}
               key={link.name}
-              className={}
+              className={`block rounded 
+                ${pathName === link.href 
+                  ? 'text-main'
+                  : 'text-dark'
+                }`
+              }
             >
 
             </Link>
