@@ -1,6 +1,7 @@
 import { calculateAge } from '@/lib/util'
 import { Card, CardBody, Divider, Image } from '@nextui-org/react'
 import { Member } from '@prisma/client'
+import Link from 'next/link'
 
 type Props = {
   member: Member
@@ -45,7 +46,17 @@ export default function MemberSidebar({member}: Props) {
           </div>
         </div>
         <Divider className='my-3' />
-        
+        <nav className='flex flex-col p-4 ml-4 text-2xl gap-4'>
+          {navLinks.map(link => (
+            <Link
+              href={link.href}
+              key={link.name}
+              className={}
+            >
+
+            </Link>
+          )) }
+        </nav>
       </CardBody>
 
     </Card>
