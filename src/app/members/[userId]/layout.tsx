@@ -2,6 +2,7 @@ import { getMemberByUserId } from '@/app/actions/memberActions'
 import { ReactNode } from 'react'
 import MemberSidebar from '../MemberSidebar'
 import { notFound } from 'next/navigation'
+import { Card } from '@nextui-org/react'
 
 export default async function Layout({
   children, 
@@ -21,7 +22,11 @@ export default async function Layout({
           member={member}
         />
       </div>
-
+      <div className='col-span-9'>
+        <Card className='w-full mt-10 h-[80vh]'>
+          {children}
+        </Card>
+      </div>
     </div>
   )
 }
