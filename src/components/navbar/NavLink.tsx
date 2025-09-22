@@ -3,7 +3,6 @@
 import { NavbarItem } from '@nextui-org/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-// import React from 'react'
 
 type NavLinkProps = {
   href: string
@@ -17,6 +16,7 @@ export default function NavLink({href, label}: NavLinkProps) {
       isActive={pathName === href} 
       as={Link} 
       href={href}
+      className='text-light hover:text-main link-transition'
     >
       {label}
     </NavbarItem>

@@ -29,9 +29,18 @@ export default async function TopNav() {
         </div>
       </NavbarBrand>
       <NavbarContent justify='center'>
-        <NavLink href='/members' label='Members' />
-        <NavLink href='/teams' label='Teams' />
-        <NavLink href='/messages' label='Messages' />
+        <NavLink 
+          href='/members' 
+          label='Members' 
+        />
+        <NavLink 
+          href='/teams' 
+          label='Teams' 
+          />
+        <NavLink 
+          href='/messages' 
+          label='Messages' 
+        />
       </NavbarContent>
       <NavbarContent justify='end'>
         {session?.user ? (

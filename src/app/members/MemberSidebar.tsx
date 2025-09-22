@@ -55,7 +55,7 @@ export default function MemberSidebar({member}: Props) {
             <Link
               href={link.href}
               key={link.name}
-              className={`block rounded 
+              className={`block rounded hover:text-main link-transition
                 ${pathName === link.href 
                   ? 'text-main'
                   : 'text-dark'
