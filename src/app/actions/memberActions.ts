@@ -36,4 +36,6 @@ export async function getMemberPhotosByUserId(userId: string) {
   })
 
   if (!member) return null
+
+  return member.photos
 }
