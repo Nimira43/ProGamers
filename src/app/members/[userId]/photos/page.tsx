@@ -1,5 +1,5 @@
 import { getMemberPhotosByUserId } from '@/app/actions/memberActions'
-import { CardHeader, Divider, CardBody } from '@nextui-org/react'
+import { CardHeader, Divider, CardBody, Image } from '@nextui-org/react'
 
 export default async function PhotosPage({
   params
@@ -15,7 +15,19 @@ export default async function PhotosPage({
       </CardHeader>
       <Divider />
       <CardBody>
-        Members photos
+        <div className='grid grid-cols-5 gap-3'>
+          {photos && photos.map(photo => (
+            <div key={photo.id}>
+              <Image
+                width={300}
+                height={300}
+                src={photo.url}
+                alt='Member photos'
+                className=''
+              />
+            </div>
+          ))}
+        </div>
       </CardBody>
     </>
   )
