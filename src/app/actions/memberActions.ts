@@ -28,3 +28,7 @@ export async function getMemberByUserId(userId: string) {
     console.log(error)
   }
 }
+
+export async function getMemberPhotosByUserId(userId) {
+  
+}
