@@ -4,11 +4,11 @@ export default function ChatPage() {
   return (
     <>
       <CardHeader className='text-2xl font-medium text-main'>
-        Profile
+        Chat
       </CardHeader>
       <Divider />
       <CardBody>
-        Members photos
+        Members chat
       </CardBody>
     </>
   )

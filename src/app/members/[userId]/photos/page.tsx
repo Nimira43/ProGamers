@@ -4,7 +4,7 @@ export default function PhotosPage() {
   return (
     <>
       <CardHeader className='text-2xl font-medium text-main'>
-        Profile
+        Photos
       </CardHeader>
       <Divider />
       <CardBody>
