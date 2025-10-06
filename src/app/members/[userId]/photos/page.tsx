@@ -1,3 +1,5 @@
+import { CardHeader, Divider, CardBody } from "@nextui-org/react";
+
 export default function page() {
   return (
     <>
