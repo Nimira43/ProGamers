@@ -34,4 +34,6 @@ export async function getMemberPhotosByUserId(userId: string) {
     where: {userId},
     select: {photos: true}
   })
+
+  if (!member) return null
 }
