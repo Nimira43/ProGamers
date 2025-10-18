@@ -23,7 +23,7 @@ export default async function PhotosPage({
                 height={300}
                 src={photo.url}
                 alt='Member photos'
-                className=''
+                className='object-cover aspect-square'
               />
             </div>
           ))}
