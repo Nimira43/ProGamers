@@ -1,7 +1,9 @@
+import { useEffect } from 'react'
 
 export default function error() {
-  
-
+  useEffect(() => {
+    console.error(error)
+  }, [error])
 
   return (
     <div>
