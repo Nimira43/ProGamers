@@ -9,6 +9,13 @@ export async function getMembers() {
   if (!session?.user) return null
   
   try {
+
+    // Test code
+
+    throw new Error('Testing...')
+
+    //
+
     return prisma.member.findMany({
       where: {
         NOT: {
@@ -18,6 +25,11 @@ export async function getMembers() {
     })
   } catch (error) {
     console.log(error)
+
+    // Error testing
+    throw error
+    // End of Error testing
+
   }
 }
 
