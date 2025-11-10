@@ -15,7 +15,7 @@ export default function Error({
     <div className='flex items-center justify-center vertical-center'>
       <Card className='w-2/5 mx-auto'>
         <CardHeader className='flex flex-col items-center justify-center'>
-          <div className='flex flex-col gap-2 items-center text-main'>
+          <div className='flex flex-row gap-2 items-center text-main'>
             <ImConfused size={30} />
             <h1 className='text-3xl font-medium uppercase'>
               Error
