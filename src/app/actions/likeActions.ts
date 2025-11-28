@@ -45,8 +45,11 @@ export async function fetchCurrentUserLikeIds() {
         targetUserId: true
       }
     })
+
+    return likeIds.map(like => like.targetUserId)
   
   } catch (error) {
-    
+    console.log(error)
+    throw error
   }
 }
