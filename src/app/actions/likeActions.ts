@@ -35,5 +35,9 @@ export async function toggleLikeMember(
 }
 
 export async function fetchCurrentUserLikeIds() {
-
+  try {
+    const userId = await getAuthUserId()
+  } catch (error) {
+    
+  }
 }
