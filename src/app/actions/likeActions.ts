@@ -32,6 +32,7 @@ export async function toggleLikeMember(
     }
     
   } catch (error) {
-    
+    console.log(error)
+    throw error
   }
 }
