@@ -51,6 +51,8 @@ model Member {
   image         String?
   user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   photos        Photo[]
+  sourceLikes   Like[] @relation("source")
+  targetLikes   Like[] @relation("target")
 }
 
 model Photo {
