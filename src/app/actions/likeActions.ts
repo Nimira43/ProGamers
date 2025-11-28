@@ -22,6 +22,13 @@ export async function toggleLikeMember(
           }
         }
       })
+    } else {
+      await prisma.like.create({
+        data: {
+          sourceUserId: userId,
+          targetUserId
+        }
+      })
     }
     
   } catch (error) {
