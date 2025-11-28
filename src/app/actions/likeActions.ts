@@ -36,3 +36,7 @@ export async function toggleLikeMember(
     throw error
   }
 }
+
+export async function fetchCurrentUserLikeIds() {
+  
+}
