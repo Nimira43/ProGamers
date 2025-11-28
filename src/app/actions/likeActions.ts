@@ -1,17 +1,14 @@
 'use server'
 
-import { auth } from '@/auth'
 import { prisma } from '@/lib/prisma'
+import { getAuthUserId } from './authActions'
 
 export async function toggleLikeMember(
   targetUserId: string,
   isLiked: boolean
 ) { 
   try {
-    const session = await auth()
-    const userId = session?.user?.id
-  
-    if (!userId) throw new Error('Unauthorised.')
+    const userId = await getAuthUserId()
 
     if (isLiked) {
       await prisma.like.delete({
@@ -38,5 +35,5 @@ export async function toggleLikeMember(
 }
 
 export async function fetchCurrentUserLikeIds() {
-  
+
 }
