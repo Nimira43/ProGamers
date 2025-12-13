@@ -1,5 +1,6 @@
 import { toggleLikeMember } from '@/app/actions/likeActions'
 import { useRouter } from 'next/navigation'
+import { GoThumbsup, GoThumbsdown } from 'react-icons/go'
 
 type Props = {
   targetId: string
@@ -18,6 +19,11 @@ export default function LikeButton({
   }
 
   return (
-    <div>LikeButton</div>
+    <div
+      onClick={toggleLike}
+      className='relative hover:opacity-80 transition cursor-pointer'
+    >
+
+    </div>
   )
 }
