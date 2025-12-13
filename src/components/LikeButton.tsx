@@ -1,3 +1,4 @@
+import { toggleLikeMember } from '@/app/actions/likeActions'
 import { useRouter } from 'next/navigation'
 
 type Props = {
@@ -11,7 +12,9 @@ export default function LikeButton({
 }: Props) {
   const router = useRouter()
 
-
+  async function toggleLike() {
+    await toggleLikeMember(targetId, hasLiked)
+  }
 
   return (
     <div>LikeButton</div>
