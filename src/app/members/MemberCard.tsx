@@ -9,7 +9,10 @@ type Props = {
   likeIds: string[]
 }
 
-export default function MemberCard({member}: Props) {
+export default function MemberCard({
+  member,
+  likeIds
+}: Props) {
   return (
     <Card 
       fullWidth
