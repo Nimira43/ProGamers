@@ -33,7 +33,7 @@ export default function LikeButton({
         size={24}
         className={hasLiked
           ? 'fill-main'
-          : 'fill-grey-light'
+          : 'fill-grey-light-extra'
         }
       />
     </div>
