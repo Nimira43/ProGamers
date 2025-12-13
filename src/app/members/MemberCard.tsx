@@ -1,3 +1,5 @@
+'use client'
+
 import LikeButton from '@/components/LikeButton'
 import { calculateAge } from '@/lib/util'
 import { Card, CardFooter, Image } from '@nextui-org/react'
@@ -34,7 +36,7 @@ export default function MemberCard({
         src={member.image || '/images/user.png'}
         className='aspect-square object-cover'
       />
-      <div>
+      <div onClick={preventLinkAction}>
         <div className='absolute top-3 right-3 z-50'>
           <LikeButton
             targetId={member.userId}
