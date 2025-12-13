@@ -13,6 +13,7 @@ export default async function MembersPage() {
           <MemberCard 
             member={member}
             key={member.id}
+            likeIds={likeIds}
           />
         ))}
     </div>
