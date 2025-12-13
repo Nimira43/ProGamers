@@ -15,7 +15,10 @@ export default function MemberCard({
 }: Props) {
   const hasLiked = likeIds.includes(member.userId)
 
-  const preventLinkAction = () => {}
+  const preventLinkAction = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+  }
 
   return (
     <Card 
