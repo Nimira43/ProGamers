@@ -32,7 +32,7 @@ export default function MemberCard({
       <div className='absolute top-3 right-3 z-50'>
         <LikeButton
           targetId={member.userId}
-          hasLiked={false}
+          hasLiked={hasLiked}
         />
       </div>
       <CardFooter 
