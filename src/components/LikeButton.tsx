@@ -1,3 +1,5 @@
+'use client'
+
 import { toggleLikeMember } from '@/app/actions/likeActions'
 import { useRouter } from 'next/navigation'
 import { BsHandThumbsUpFill, BsHandThumbsUp } from 'react-icons/bs'
