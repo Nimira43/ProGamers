@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 type Props = {
   member: Member
+  likeIds: string[]
 }
 
 export default function MemberCard({member}: Props) {
