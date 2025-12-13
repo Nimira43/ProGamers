@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation'
 
 type Props = {
   targetId: string
-  hasLiked: string
+  hasLiked: boolean
 }
 
 export default function LikeButton({
@@ -14,6 +14,7 @@ export default function LikeButton({
 
   async function toggleLike() {
     await toggleLikeMember(targetId, hasLiked)
+    router.refresh()
   }
 
   return (
