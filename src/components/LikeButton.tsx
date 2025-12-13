@@ -1,6 +1,6 @@
 import { toggleLikeMember } from '@/app/actions/likeActions'
 import { useRouter } from 'next/navigation'
-import { GoThumbsup, GoThumbsdown } from 'react-icons/go'
+import { BsHandThumbsUpFill, BsHandThumbsUp } from 'react-icons/bs'
 
 type Props = {
   targetId: string
@@ -21,9 +21,19 @@ export default function LikeButton({
   return (
     <div
       onClick={toggleLike}
-      className='relative hover:opacity-80 transition cursor-pointer'
+      className='relative hover:opacity-80 link-transition cursor-pointer'
     >
-
+      <BsHandThumbsUp
+        size={28}
+        className='fill- absolute -top-[2px] -right-[2px]'
+      />
+      <BsHandThumbsUpFill
+        size={24}
+        className={hasLiked
+          ? 'fill-main'
+          : 'fill-grey-light'
+        }
+      />
     </div>
   )
 }
