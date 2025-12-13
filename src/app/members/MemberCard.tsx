@@ -13,6 +13,8 @@ export default function MemberCard({
   member,
   likeIds
 }: Props) {
+  const hasLiked = likeIds.includes(member.userId)
+
   return (
     <Card 
       fullWidth
