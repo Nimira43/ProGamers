@@ -15,6 +15,8 @@ export default function MemberCard({
 }: Props) {
   const hasLiked = likeIds.includes(member.userId)
 
+  const preventLinkAction = () => {}
+
   return (
     <Card 
       fullWidth
@@ -29,12 +31,15 @@ export default function MemberCard({
         src={member.image || '/images/user.png'}
         className='aspect-square object-cover'
       />
-      <div className='absolute top-3 right-3 z-50'>
-        <LikeButton
-          targetId={member.userId}
-          hasLiked={hasLiked}
-        />
+      <div>
+        <div className='absolute top-3 right-3 z-50'>
+          <LikeButton
+            targetId={member.userId}
+            hasLiked={hasLiked}
+          />
+        </div>
       </div>
+      
       <CardFooter 
         className='flex justify-start bg-dark bg-dark-gradient overflow-hidden absolute bottom-0 z-10'
       >
