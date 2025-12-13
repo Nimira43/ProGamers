@@ -1,3 +1,4 @@
+import LikeButton from '@/components/LikeButton'
 import { calculateAge } from '@/lib/util'
 import { Card, CardFooter, Image } from '@nextui-org/react'
 import { Member } from '@prisma/client'
@@ -22,6 +23,12 @@ export default function MemberCard({member}: Props) {
         src={member.image || '/images/user.png'}
         className='aspect-square object-cover'
       />
+      <div className='absolute top-3 right-3 z-50'>
+        <LikeButton
+          targetId={member.userId}
+          hasLiked={false}
+        />
+      </div>
       <CardFooter 
         className='flex justify-start bg-dark bg-dark-gradient overflow-hidden absolute bottom-0 z-10'
       >
