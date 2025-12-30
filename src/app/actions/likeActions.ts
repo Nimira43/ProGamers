@@ -89,7 +89,9 @@ async function fetchTargetLikes(userId: string) {
   return targetList.map(x => x.sourceMember)
 }
 
-function fetchMutualLikes(userId: string) {
-  throw new Error('Function not implemented.')
+async function fetchMutualLikes(userId: string) {
+  const likedUsers = await prisma.like.findMany({
+    where: {sourceUserId: userId}
+  })
 }
 
