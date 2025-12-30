@@ -73,8 +73,11 @@ export async function fetchLikedMembers(type = 'source') {
   }
 }
 
-function fetchSourceLikes(userId: string) {
-  throw new Error('Function not implemented.')
+async function fetchSourceLikes(userId: string) {
+  const sourceList = await prisma.like.findMany({
+    where: { sourceUserId: userId },
+    select: {targetMember: true}
+  })
 }
 function fetchTargetLikes(userId: string) {
   throw new Error('Function not implemented.')
