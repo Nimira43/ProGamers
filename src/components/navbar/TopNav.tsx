@@ -34,8 +34,8 @@ export default async function TopNav() {
           label='Members' 
         />
         <NavLink 
-          href='/teams' 
-          label='Teams' 
+          href='/lists' 
+          label='Lists' 
           />
         <NavLink 
           href='/messages' 
