@@ -78,7 +78,9 @@ async function fetchSourceLikes(userId: string) {
     where: { sourceUserId: userId },
     select: {targetMember: true}
   })
+  return sourceList.map(x => x.targetMember)
 }
+
 function fetchTargetLikes(userId: string) {
   throw new Error('Function not implemented.')
 }
