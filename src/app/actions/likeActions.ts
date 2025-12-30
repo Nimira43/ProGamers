@@ -56,7 +56,16 @@ export async function fetchCurrentUserLikeIds() {
 
 export async function fetchLikedMembers(type = 'source') {
   try {
+    const userId = await getAuthUserId()
+
+    switch (type) {
+      case 'source':
+        
+        break
     
+      default:
+        break
+    }
   } catch (error) {
     
   }
