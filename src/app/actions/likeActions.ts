@@ -106,6 +106,5 @@ async function fetchMutualLikes(userId: string) {
     select: {sourceMember: true}
   })
   return mutualList.map(x => x.sourceMember)
-
 }
 
