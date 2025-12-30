@@ -53,3 +53,11 @@ export async function fetchCurrentUserLikeIds() {
     throw error
   }
 }
+
+export async function fetchLikedMembers(type = 'source') {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
