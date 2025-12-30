@@ -60,9 +60,11 @@ export async function fetchLikedMembers(type = 'source') {
 
     switch (type) {
       case 'source':
-        
-        break
-    
+        return await fetchSourceLikes(userId)
+      case 'target':
+        return await fetchTargetLikes(userId)
+      case 'mutual':
+        return await fetchMutualLikes(userId)
       default:
         break
     }
