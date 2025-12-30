@@ -91,7 +91,18 @@ async function fetchTargetLikes(userId: string) {
 
 async function fetchMutualLikes(userId: string) {
   const likedUsers = await prisma.like.findMany({
-    where: {sourceUserId: userId}
+    where: { sourceUserId: userId },
+    select: { targetUserId: true}
   })
+  const likedIds = likedUsers.map(x => x.targetUserId)
+  const mutualList = await prisma.like.findMany({
+    where: {
+      AND: [
+        {targetUserId: userId}
+      ]
+    }
+  })
+
+
 }
 
