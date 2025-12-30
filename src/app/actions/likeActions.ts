@@ -69,7 +69,8 @@ export async function fetchLikedMembers(type = 'source') {
         return []
     }
   } catch (error) {
-    
+    console.log(error)
+    throw error
   }
 }
 
