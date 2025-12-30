@@ -66,7 +66,7 @@ export async function fetchLikedMembers(type = 'source') {
       case 'mutual':
         return await fetchMutualLikes(userId)
       default:
-        break
+        return []
     }
   } catch (error) {
     
