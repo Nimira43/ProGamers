@@ -72,3 +72,15 @@ export async function fetchLikedMembers(type = 'source') {
     
   }
 }
+
+function fetchSourceLikes(userId: string) {
+  throw new Error('Function not implemented.')
+}
+function fetchTargetLikes(userId: string) {
+  throw new Error('Function not implemented.')
+}
+
+function fetchMutualLikes(userId: string) {
+  throw new Error('Function not implemented.')
+}
+
