@@ -43,8 +43,7 @@ export default function UserMenu({user}: Props) {
         >
           Edit Profile
         </DropdownItem>
-        <DropdownItem
-          color='danger' 
+        <DropdownItem 
           onClick={async () => signOutUser()}
         >
           Logout
