@@ -1,13 +1,21 @@
 import React from 'react'
-import Link from 'next/link'
+import ListsTab from './ListsTab'
+import { fetchCurrentUserLikeIds, fetchLikedMembers } from '../actions/likeActions'
 
-export default function ListsPage() {
+export default async function ListsPage({
+  searchParams
+}: {
+  searchParams: {type: string}
+}) {
+  const likeIds = await fetchCurrentUserLikeIds()
+  const members = await fetchLikedMembers(searchParams.type)
+  
   return (
     <div>
-      <h3 className='text-3xl'>Lists Page</h3>
-      <Link href='/'>
-        Home
-      </Link>
+      <ListsTab
+        members={members}
+        likeIds={likeIds}
+      />
     </div>
   )
 }
