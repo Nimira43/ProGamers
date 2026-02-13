@@ -10,7 +10,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'ProGamers',
+  title: 'Apollo',
   description: 'Next JS app with NextUI and Framer Motion',
 }
 

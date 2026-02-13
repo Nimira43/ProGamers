@@ -1,5 +1,5 @@
 import { Button, Navbar, NavbarBrand, NavbarContent} from '@nextui-org/react'
-import { TbDeviceGamepad3 } from 'react-icons/tb'
+import { GiAbstract086 } from "react-icons/gi"
 import React from 'react'
 import Link from 'next/link'
 import NavLink from './NavLink'
@@ -23,9 +23,9 @@ export default async function TopNav() {
       }}
     >
       <NavbarBrand as={Link} href='/'>
-        <TbDeviceGamepad3 size={40} color='white' />
+        <GiAbstract086 size={30} className='text-main' />
         <div className='font-bold text-3xl text-main flex'>
-          <span className='logo font-bold tracking-wider pl-2'>ProGamers</span>
+          <span className='logo font-bold tracking-wider pl-2'>Apollo</span>
         </div>
       </NavbarBrand>
       <NavbarContent justify='center'>

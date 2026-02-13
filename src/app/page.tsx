@@ -8,7 +8,7 @@ export default async function Home() {
 
   return (
     <div className='m-20'>
-      <h1 className='text-4xl mb-5'>Welcome to ProGamers</h1>
+      <h1 className='text-4xl mb-5'>Welcome to Apollo</h1>
       <h3 className='text-2xl text-main uppercase font-medium mb-5'>User Session Data</h3>
       {session ? (
         <div>

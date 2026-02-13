@@ -1,21 +1,27 @@
 'use client'
 
+import { updateMemberProfile } from '@/app/actions/userAction'
 import { MemberEditSchema, memberEditSchema } from '@/lib/schemas/memberEditSchema'
+import { handleFormServerErrors } from '@/lib/util'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Input, Textarea } from '@nextui-org/react'
 import { Member } from '@prisma/client'
+import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 
 type Props = {
   member: Member
 }
 
 export default function EditForm({member}: Props) {
+  const router = useRouter()
   const {
     register,
     handleSubmit,
     reset,
+    setError,
     formState: {
       isValid,
       isDirty,
@@ -38,8 +44,16 @@ export default function EditForm({member}: Props) {
     }
   }, [member, reset])
 
-  const onSubmit = (data: MemberEditSchema) => {
-    console.log(data)
+  const onSubmit = async (data: MemberEditSchema) => {
+    const result = await updateMemberProfile(data)
+
+    if (result.status === 'success') {
+      toast.success('Profile updated')
+      router.refresh()
+      reset({...data})
+    } else {
+      handleFormServerErrors(result, setError)
+    }
   }
   
   return (
@@ -49,7 +63,7 @@ export default function EditForm({member}: Props) {
     >
       <Input
         label='Name'
-        // variant='bordered'
+        variant='bordered'
         {...register('name')}
         defaultValue={member.name}
         isInvalid={!!errors.name}
@@ -57,7 +71,7 @@ export default function EditForm({member}: Props) {
       />
       <Textarea
         label='Description'
-        // variant='bordered'
+        variant='bordered'
         {...register('description')}
         defaultValue={member.description}
         isInvalid={!!errors.description}
@@ -66,22 +80,27 @@ export default function EditForm({member}: Props) {
       />
       <div className='flex flex-row gap-4'>
         <Input
-        label='City'
-        // variant='bordered'
-        {...register('city')}
-        defaultValue={member.city}
-        isInvalid={!!errors.city}
-        errorMessage={errors.city?.message}
+          label='City'
+          variant='bordered'
+          {...register('city')}
+          defaultValue={member.city}
+          isInvalid={!!errors.city}
+          errorMessage={errors.city?.message}
         />
         <Input
           label='Country'
-          // variant='bordered'
+          variant='bordered'
           {...register('country')}
           defaultValue={member.country}
           isInvalid={!!errors.country}
           errorMessage={errors.country?.message}
         />
       </div>
+      {errors.root?.serverError && (
+        <p className='text-main text-sm'>
+          {errors.root.serverError.message}
+        </p>
+      )}
       <Button
         type='submit'
         className='flex  btn'
