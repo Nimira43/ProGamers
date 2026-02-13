@@ -1,7 +1,6 @@
 import { auth, signOut } from '@/auth'
 import { Button } from '@nextui-org/react'
-// import React from 'react'
-import { MdOutlineGames } from "react-icons/md"
+import { GiAbstract086 } from 'react-icons/gi'
 
 export default async function Home() {
   const session = await auth()
@@ -22,7 +21,7 @@ export default async function Home() {
             <Button
               className='mt-5 btn'
               type='submit'
-              startContent={<MdOutlineGames size={20} />}
+              startContent={<GiAbstract086 size={20} />}
             >
               Sign Out
             </Button>

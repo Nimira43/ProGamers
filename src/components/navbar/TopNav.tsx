@@ -1,5 +1,5 @@
 import { Button, Navbar, NavbarBrand, NavbarContent} from '@nextui-org/react'
-import { GiAbstract086 } from "react-icons/gi"
+import { GiAbstract086 } from 'react-icons/gi'
 import React from 'react'
 import Link from 'next/link'
 import NavLink from './NavLink'
