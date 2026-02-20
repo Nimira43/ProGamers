@@ -27,6 +27,7 @@
     border: none !important; 
   }
 
+  .transitioning,
   .link-transition {
     transition: all 0.5s ease-in-out;
   }
