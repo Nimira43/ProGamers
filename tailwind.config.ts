@@ -14,11 +14,16 @@ const config: Config = {
         'main': '#ff4500',
         'support': '#008080',
         'dark': '#111',
-        'light': '#fffcfa',
+        'light': '#fffdfa',
         'grey-dark': '#333',
         'grey-medium': '#888',
         'grey-light': '#ccc',
         'grey-light-extra': '#eee',
+        'grey-1': '#333',
+        'grey-2': '#888',
+        'grey-3': '#ccc',
+        'grey-4': '#eee',
+        'grey-5': '#fafafa',
       },
       backgroundImage: {
         'dark-gradient': 'linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)'
