@@ -42,3 +42,29 @@ export async function updateMemberProfile(
     }
   }
 }
+
+export async function addimage(
+  url: string,
+  publicId: string
+) {
+  try {
+    const userId = await getAuthUserId()
+
+    return prisma.member.update({
+      where: {userId},
+      data: {
+        photos: {
+          create: [
+            {
+              url,
+              publicId
+            }
+          ]
+        }
+      }
+    })
+  } catch (error) {
+    console.log(error)
+    throw error
+  }
+}
