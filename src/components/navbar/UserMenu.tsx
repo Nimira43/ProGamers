@@ -1,6 +1,7 @@
 'use client'
 
 import { signOutUser } from '@/app/actions/authActions'
+import { transformImageUrl } from '@/lib/util'
 import { Avatar, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger } from '@nextui-org/react'
 import Link from 'next/link'
 import React from 'react'
@@ -22,7 +23,7 @@ export default function UserMenu({userInfo}: Props) {
           className='transition-transform orange'
           name={userInfo?.name || 'user avatar'}
           size='sm'
-          src={userInfo?.image || '/images/user.jpg'}
+          src={transformImageUrl(userInfo?.image) || '/images/user.jpg'}
         />
       </DropdownTrigger>
       <DropdownMenu variant='flat'>

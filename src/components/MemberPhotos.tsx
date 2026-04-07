@@ -1,6 +1,6 @@
 'use client'
 
-import { setMainImage } from '@/app/actions/userAction'
+import { deleteImage, setMainImage } from '@/app/actions/userAction'
 import { Photo } from '@prisma/client'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
@@ -42,6 +42,22 @@ export default function MemberPhotos({
     })
   }
 
+  const onDelete = async (photo: Photo) => {
+    if (photo.url === mainImageUrl) return null
+    setLoading({ 
+      isLoading: true, 
+      id: photo.id,
+      type: 'delete'
+    })
+    await deleteImage(photo)
+    router.refresh()
+    setLoading({
+      isLoading: false,
+      id: '',
+      type: ''
+    })
+  }
+
   return (
     <div className='grid grid-cols-5 gap-3 p-5'>
       {photos && photos?.map(photo => (
@@ -65,9 +81,16 @@ export default function MemberPhotos({
                   }
                 />
               </div>
-              <div className='absolute top-3 right-3 z-50'>
+              <div
+                onClick={() => onDelete(photo)}
+                className='absolute top-3 right-3 z-50'
+              >
                 <DeleteButton
-                  loading={false}
+                  loading={
+                    loading.isLoading && 
+                    loading.type === 'delete' &&
+                    loading.id === photo.id
+                  }
                 />
               </div>  
             </>

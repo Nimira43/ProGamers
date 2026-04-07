@@ -11,7 +11,7 @@ export default function ImageUploadButton({
 }: Props) {
   return (
     <CldUploadButton
-      options={{maxFiles: 1}}
+      options={{ maxFiles: 1 }}
       onSuccess={onUploadImage}
       signatureEndpoint='/api/sign-image'
       uploadPreset='apollo'

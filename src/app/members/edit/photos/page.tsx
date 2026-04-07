@@ -15,12 +15,15 @@ export default async function PhotosPage() {
 
   return (
     <>
-      <CardHeader className='text-2xl font-medium text-main'>
-        Upload Photos
+      <CardHeader className='flex flex-row justify-between items-center'>
+        <div className='text-2xl font-medium text-main'>
+          Upload Photos
+        </div>
+        <MemberPhotoUpload />
       </CardHeader>
       <Divider />
       <CardBody>
-        <MemberPhotoUpload />
+        
         <MemberPhotos 
           photos={photos}
           editing={true}
