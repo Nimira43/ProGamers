@@ -1,4 +1,4 @@
-import { AiFillDelete, AiOutlineDelete } from 'react-icons/ai'
+import { AiFillDelete } from 'react-icons/ai'
 import { PiSpinnerGap } from 'react-icons/pi'
 
 type Props = {

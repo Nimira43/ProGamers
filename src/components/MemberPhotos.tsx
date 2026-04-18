@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import MemberImage from './MemberImage'
 import StarButton from './StarButton'
-import DeleteButton from './navbar/DeleteButton'
+import DeleteButton from './DeleteButton'
 
 type Props = {
   photos: Photo[] | null
